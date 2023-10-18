@@ -22,7 +22,11 @@ function strArray(type) {
     }
     this.push = (elm) => { }
     this.pop = (elm) => { }
-    this.access = (elm, contents) => { }
+    this.access = (elm, contents) => {
+        if(!contents){
+            return this.data.substring(this.max*elm,this.max+1*elm).trim()
+        }
+     }
     this.shift = (elm, destination) => { }
     this.slice = (index) => { }
 }
